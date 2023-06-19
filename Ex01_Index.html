@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="Ex01_IndexControler.js"></script>
+    
+
+</head>
+<body class="container" ng-app="myApp" ng-controller="myCtrl">
+    <h1>Car List</h1>
+    <div align ="right" style="padding: 10px;">
+        <input ng-model="txtSearch" placeholder="Enter your text to search:">
+    </div>
+    <div style="border: 1px solid gray;">
+        <table class="table table-borderedless">
+            <tr>
+                <td align="right">Brand</td>
+                <td><input ng-model="txtbrand"></td>
+            </tr>
+            <tr>
+                <td align="right">model</td>
+                <td><input ng-model="txtmodel"></td>
+            </tr>
+            <tr>
+                <td align="right">Picture</td>
+            <td> <input type="file" ng-model:"txtbrand">
+            </td>    
+            </tr>
+            <tr>
+                <td align="right">Price</td>
+            <td><input ng-model="txtprice"></td>
+            
+            </tr>
+        </table>
+    </div>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th ng-click="hamsapxep('brand')">brand</th>
+            <th ng-click-="hamsapxep('model')">model</th>
+            <th>Image</th>
+            <th ng-click-="hamsapxep('Price')">Price</th>
+            <th>Function</th>
+        </tr>
+        <tr ng-repeat="data in cars | filter: txtSearch | orderBy:sapxep.cot:sapxep.descending">
+            <td>{{ data.brand}}</td>
+            <td>{{ data.model}}</td>
+            <td><img src="{{data.picture}}" width="150"></td>
+            <td>{{ data.Price}}</td>
+            <td>
+                <a href="#">Update</a>
+                <a href="#" onclick="return confirm('Are you sure remove the data?');">Delete</a>
+            </td>
+  
+
+
+
+        </tr>
+    </table>
+
+    </div>    
+</body>
+</html>
