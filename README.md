@@ -1,4 +1,4 @@
-# -BrightWorld-_-Team5-
+# -BrightWorld-
 =======================================
 + Supervisor		: LÊ THANH NHÂN
 + Semester		: I	
