@@ -7,8 +7,9 @@
 + List Of Member:
 01. Lê Ngọc Hải 	        (Student1468198)
 02. Nguyễn Lê Thanh Minh	(Student1468215)
-03. Đoàn Công Danh	        (Student1468173)
+03. Đoàn Công Danh	      (Student1468173)
 04. Lê Nguyễn Anh Văn 		(Student1448423)
+  
 =======================================
 Documentations : https://github.com/L3nhan/doodle_group01/tree/main/Documentations
 =======================================
